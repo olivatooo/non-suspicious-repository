@@ -1,6 +1,7 @@
 package users
 
 import (
+	"fmt"
 	"net/http"
 
 	"account/actions"
@@ -63,5 +64,16 @@ func handleLogin(c buffalo.Context) error {
 		return c.Render(http.StatusUnauthorized, actions.R.JSON("Unauthorized"))
 	}
 
-	return c.Render(http.StatusOK, actions.R.JSON(""))
+	tokenString, err := generateJWT(credentials.Email)
+	fmt.Println(err)
+	if err != nil {
+		return c.Render(http.StatusInternalServerError, actions.R.JSON("Something went wrong"))
+	}
+
+	type token struct {
+		Token string `json:"token"`
+	}
+	authToken := token{Token: tokenString}
+
+	return c.Render(http.StatusOK, actions.R.JSON(authToken))
 }
