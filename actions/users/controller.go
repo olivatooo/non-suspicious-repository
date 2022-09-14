@@ -41,5 +41,5 @@ func handleCreation(c buffalo.Context) error {
 		return c.Render(http.StatusInternalServerError, actions.R.JSON("Could not create user"))
 	}
 
-	return c.Render(http.StatusAccepted, actions.R.JSON(""))
+	return c.Render(http.StatusCreated, actions.R.JSON(""))
 }
