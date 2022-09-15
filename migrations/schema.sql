@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 14.5
--- Dumped by pg_dump version 14.3
+-- Dumped by pg_dump version 14.5
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -84,11 +84,11 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: api
+-- Name: users users_id; Type: CONSTRAINT; Schema: public; Owner: api
 --
 
 ALTER TABLE ONLY public.users
-    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+    ADD CONSTRAINT users_id PRIMARY KEY (id);
 
 
 --

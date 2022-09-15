@@ -23,30 +23,25 @@ func timeTrack(start time.Time, name string) {
 
 // Test to validate account creation using email and password
 func (as *ActionSuite) Test_handleUserCreation() {
-	type createUser struct {
-		Email    string `json:"email"`
-		Password string `json:"password"`
-	}
-
-	user := createUser{}
+	user := Credentials{}
 	user.Email = "jorge@jorge.com"
 	user.Password = "testingPassword"
 	res := as.JSON("/users").Post(user)
 	as.Equal(http.StatusCreated, res.Code)
 
-	user = createUser{}
+	user = Credentials{}
 	user.Email = "not_an_email"
 	user.Password = "testingPassword"
 	res = as.JSON("/users").Post(user)
 	as.Equal(http.StatusBadRequest, res.Code)
 
-	user = createUser{}
+	user = Credentials{}
 	user.Email = ""
 	user.Password = ""
 	res = as.JSON("/users").Post(user)
 	as.Equal(http.StatusBadRequest, res.Code)
 
-	user = createUser{}
+	user = Credentials{}
 	res = as.JSON("/users").Post(user)
 	as.Equal(http.StatusBadRequest, res.Code)
 }

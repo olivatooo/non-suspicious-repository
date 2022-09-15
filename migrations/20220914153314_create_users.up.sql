@@ -1,8 +1,8 @@
-create table if not exists users(
-  id serial not null unique primary key,
-  email varchar(255) not null unique,
-  password varchar(60) not null,
-  created_at timestamp without time zone default now(),
-  updated_at timestamp without time zone default now()
+CREATE TABLE IF NOT EXISTS USERS(
+  id SERIAL NOT NULL UNIQUE PRIMARY KEY,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(60) NOT NULL,
+  created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW()
 );
 
