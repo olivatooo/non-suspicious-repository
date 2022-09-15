@@ -80,6 +80,8 @@ github.com/gobuffalo/meta v0.3.2 h1:KA8PXNHZ+maS6SrE/om1UVyKbV0SjytQw0mAUGsiK1k=
 github.com/gobuffalo/meta v0.3.2/go.mod h1:qTZ/9n499kXeJ49PHHoSQr63R+kWNpQKiYD62C+AtHI=
 github.com/gobuffalo/meta v0.3.3 h1:GwPWdbdnp4JrKASvMLa03OtmzISq7z/nE7T6aMqzoYM=
 github.com/gobuffalo/meta v0.3.3/go.mod h1:o4B099IUFUfK4555Guqxz1zHAqyuUQ/KtHXi8WvVeFE=
+github.com/gobuffalo/mw-contenttype v1.0.1 h1:WrMuapZGshR1UYJJHJp9zBg82mg/7NtT1Ooua5/veLg=
+github.com/gobuffalo/mw-contenttype v1.0.1/go.mod h1:mU9Nzy7uzfVfrqfK5uGnUYEWIBgDnG76sFE0RZSw84U=
 github.com/gobuffalo/mw-csrf v1.0.1 h1:L4b3ZN5KpnyfqdfI0gu+HHPED5GMyCl1oHWTqE1hIvo=
 github.com/gobuffalo/mw-csrf v1.0.1/go.mod h1:JAbogWdDR+194rn3Rt8/qf/9RTmFvml9FXEGGAAJ9WU=
 github.com/gobuffalo/mw-i18n/v2 v2.0.2 h1:GKWuzVTP3MW7km9gwOoMwN4KP1ISxN0T2SoVkqDCZTY=
@@ -112,6 +114,8 @@ github.com/gobuffalo/validate/v3 v3.3.2 h1:GZdJlDy6zDRXF5BnEiY+pGvGDFx95atMIWd3N
 github.com/gobuffalo/validate/v3 v3.3.2/go.mod h1:jiEEw+N7KbAP2aInFxGnfitI0g7HjXqcp5hDD6TaQDU=
 github.com/gobuffalo/validate/v3 v3.3.3 h1:o7wkIGSvZBYBd6ChQoLxkz2y1pfmhbI4jNJYh6PuNJ4=
 github.com/gobuffalo/validate/v3 v3.3.3/go.mod h1:YC7FsbJ/9hW/VjQdmXPvFqvRis4vrRYFxr69WiNZw6g=
+github.com/gobuffalo/x v0.1.0 h1:ILV6PIfyQto7RKfxRutQUuW234x+A5/+FRQpik0hNrM=
+github.com/gobuffalo/x v0.1.0/go.mod h1:WevpGD+5YOreDJznWevcn8NTmQEW5STSBgIkpkjzqXc=
 github.com/gofrs/uuid v4.0.0+incompatible/go.mod h1:b2aQJv3Z4Fp6yNu3cdSllBxTCLRxnplIgP/c0N/04lM=
 github.com/gofrs/uuid v4.1.0+incompatible/go.mod h1:b2aQJv3Z4Fp6yNu3cdSllBxTCLRxnplIgP/c0N/04lM=
 github.com/gofrs/uuid v4.2.0+incompatible h1:yyYWMnhkhrKwwr8gAOcOCYxOOscHgDS9yZgBrnJfGa0=
@@ -272,6 +276,8 @@ github.com/rogpeppe/go-internal v1.8.0/go.mod h1:WmiCO8CzOY8rg0OYDC4/i/2WRWAB6po
 github.com/rogpeppe/go-internal v1.8.1/go.mod h1:JeRgkft04UBgHMgCIwADu4Pn6Mtm5d4nPKWu0nJ5d+o=
 github.com/rogpeppe/go-internal v1.9.0 h1:73kH8U+JUqXU8lRuOHeVHaa/SZPifC7BkcraZVejAe8=
 github.com/rogpeppe/go-internal v1.9.0/go.mod h1:WtVeX8xhTBvf0smdhujwtBcq4Qrzq/fJaraNFVN+nFs=
+github.com/rs/cors v1.8.2 h1:KCooALfAYGs415Cwu5ABvv9n9509fSiG5SQJn/AQo4U=
+github.com/rs/cors v1.8.2/go.mod h1:XyqrcTp5zjWr1wsJ8PIRZssZ8b/WMcMf71DJnit4EMU=
 github.com/rs/xid v1.2.1/go.mod h1:+uKXf+4Djp6Md1KODXJxgGQPKngRmWyn10oCKFzNHOQ=
 github.com/rs/zerolog v1.13.0/go.mod h1:YbFCdg8HfsridGWAh22vktObvhZbQsZXe4/zB0OKkWU=
 github.com/rs/zerolog v1.15.0/go.mod h1:xYTKnLHcpfU2225ny5qZjxnj9NvkumZYjJHlAThCjNc=
