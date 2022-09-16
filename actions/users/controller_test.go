@@ -68,7 +68,7 @@ func (as *ActionSuite) Test_handleUserLogin() {
 	credential.Email = "test@test.com"
 	credential.Password = "password"
 	res = as.JSON("/users/auth").Post(credential)
-	as.Contains(res.Body.String(), "token")
+	as.Contains(res.Body.String(), "secret")
 }
 
 func Test_ActionSuite(t *testing.T) {

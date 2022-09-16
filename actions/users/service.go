@@ -1,10 +1,11 @@
 package users
 
 import (
-	"account/models"
 	"encoding/json"
 	"strconv"
 	"time"
+
+	"account/models"
 
 	"github.com/golang-jwt/jwt"
 	"golang.org/x/crypto/bcrypt"
@@ -22,7 +23,6 @@ func hashPasswordAndCreateUser(email string, password string) error {
 
 func getUserByEmail(email string) (*models.User, error) {
 	user, err := FindByEmail(email)
-
 	if err != nil {
 		return nil, err
 	}
@@ -32,7 +32,6 @@ func getUserByEmail(email string) (*models.User, error) {
 
 func checkPassword(hashedPassword string, password string) error {
 	err := bcrypt.CompareHashAndPassword([]byte(hashedPassword), []byte(password))
-
 	if err != nil {
 		return err
 	}
@@ -41,13 +40,23 @@ func checkPassword(hashedPassword string, password string) error {
 }
 
 func generateJWT(email string) (string, error) {
-	var sampleSecretKey = []byte("SecretYouShouldHide")
+	sampleSecretKey := []byte("SecretYouShouldHide")
 
-	// TODO: Find a better jwt library
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"exp": json.Number(strconv.FormatInt(time.Now().Add(time.Hour*time.Duration(1)).Unix(), 10)),
 		"iat": json.Number(strconv.FormatInt(time.Now().Unix(), 10)),
 	})
 
 	return token.SignedString(sampleSecretKey)
+}
+
+func generateSecret(userID int) (string, error) {
+	newSecret, err := UpdateSecret(userID)
+	if err != nil {
+		return "", err
+	}
+	return newSecret, nil
+}
+
+func authorizeUser(secret string) {
 }

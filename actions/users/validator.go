@@ -1,12 +1,12 @@
 package users
 
-import "account/actions"
+import (
+	"account/actions"
+)
 
 func validateCredentials(credentials *Credentials) error {
-
 	// Validate Password
 	_, err := actions.IsString(credentials.Password, 60)
-
 	if err != nil {
 		return err
 	}
@@ -18,5 +18,13 @@ func validateCredentials(credentials *Credentials) error {
 		return err
 	}
 
+	return nil
+}
+
+func validateSecret(secret string) error {
+	_, err := actions.IsString(secret, 36)
+	if err != nil {
+		return err
+	}
 	return nil
 }

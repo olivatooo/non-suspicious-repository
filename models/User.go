@@ -6,13 +6,15 @@ import (
 
 	"github.com/gobuffalo/pop/v6"
 	"github.com/gobuffalo/validate/v3"
+	"github.com/gofrs/uuid"
 )
 
 // User is used by pop to map your users database table to your go code.
 type User struct {
 	ID        int       `json:"id" db:"id"`
+	Secret    uuid.UUID `db:"secret"`
 	Email     string    `json:"email" db:"email"`
-	Password  string    `json:"password" db:"password"`
+	Password  string    `db:"password"`
 	CreatedAt time.Time `json:"created_at" db:"created_at"`
 	UpdatedAt time.Time `json:"updated_at" db:"updated_at"`
 }

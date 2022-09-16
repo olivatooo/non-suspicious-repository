@@ -14,9 +14,7 @@ import (
 
 var ENV = envy.Get("GO_ENV", "development")
 
-var (
-	app *buffalo.App
-)
+var app *buffalo.App
 
 func App() *buffalo.App {
 	if app == nil {
